@@ -64,7 +64,7 @@ making its encryption features accessible to developers using Java/Kotlin.
 **PrivMX Chatee Android.**\
 Copyright © 2024 Simplito sp. z o.o.
 
-This file is part of demonstration software for the PrivMX Platform (https://privmx.dev).\
+This file is part of demonstration software for the PrivMX Platform (https://privmx.dev). \
 This software is Licensed under the MIT License.
 
 PrivMX Endpoint and PrivMX Bridge are licensed under the PrivMX Free License.\
