@@ -13,10 +13,10 @@ privmxEndpoint = "2.0"
 appcompat = "1.6.1"
 serialization-json = "1.6.2"
 kotlin-serialization = "1.9.21"
-securityCrypto= "1.1.0-alpha06"
-lifecycle-viewmodel= "2.7.0"
-kotlin-instant="0.5.0"
-privmxInstallNative="1.0"
+securityCrypto = "1.1.0-alpha06"
+lifecycle-viewmodel = "2.7.0"
+kotlin-instant = "0.5.0"
+privmxInstallNative = "1.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -31,8 +31,8 @@ privmx-endpoint = { group = "com.simplito.java", name = "privmx-endpoint-android
 appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json-jvm", version.ref = "serialization-json" }
 androidx-security-crypto = { group = "androidx.security", name = "security-crypto", version.ref = "securityCrypto" }
-androidx-lifecycle-viewmodel-compose = {group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "lifecycle-viewmodel"}
-kotlinx-instant-jvm = {group= 'org.jetbrains.kotlinx', name='kotlinx-datetime-jvm', version.ref = "kotlin-instant"}
+androidx-lifecycle-viewmodel-compose = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "lifecycle-viewmodel" }
+kotlinx-instant-jvm = { group = 'org.jetbrains.kotlinx', name = 'kotlinx-datetime-jvm', version.ref = "kotlin-instant" }
 
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
@@ -44,5 +44,5 @@ androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-kotlinPluginSerialization = {id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin-serialization"}
-privmx-install-native = {id= "com.simplito.privmx-endpoint-install-native", version.ref= "privmxInstallNative"}
+kotlinPluginSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin-serialization" }
+privmx-install-native = { id = "com.simplito.privmx-endpoint-install-native", version.ref = "privmxInstallNative" }
