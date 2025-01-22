@@ -324,6 +324,7 @@ private fun DomainInputView(
         Spacer(modifier = Modifier.height(25.dp))
         TextField(
             value = domainName,
+            hint = "https://your.chatee.domain",
             label = context.getString(
                 R.string.login_activity_domain_enter_input_label
             ),

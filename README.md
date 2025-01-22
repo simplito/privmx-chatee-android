@@ -52,6 +52,14 @@ installations.
 
 2. Run Chatee `app` configuration.
 
+## Using Chatee Android App with non trusted domains
+
+If you are using this software with Chatee server running on domain without proper SSL certificate,
+you should create network configuration file as described
+in [Android documentation](https://developer.android.com/privacy-and-security/security-config)
+and allow cleartext traffic for your domain
+using [this setting](https://developer.android.com/privacy-and-security/risks/cleartext-communications#http-mitigations).
+
 ## About PrivMX
 
 [PrivMX](http://privmx.com) allows developers to build end-to-end encrypted apps used for
