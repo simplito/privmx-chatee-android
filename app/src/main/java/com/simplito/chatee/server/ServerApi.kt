@@ -28,8 +28,8 @@ import com.simplito.chatee.server.model.response.SignInResponseData
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.decodeFromStream
 import kotlinx.serialization.json.encodeToStream
+import java.net.HttpURLConnection
 import java.net.URL
-import javax.net.ssl.HttpsURLConnection
 
 @OptIn(ExperimentalSerializationApi::class)
 class ServerApi(
@@ -37,7 +37,7 @@ class ServerApi(
 ) {
 
     private var token: AccessToken? = null
-    private val url = "https://$domain"
+    private val url = domain
     var cloudData: CloudData? = null
         private set
 
@@ -78,13 +78,8 @@ class ServerApi(
         inputData: T? = null,
         authToken: AccessToken? = null
     ): Response<U> {
-        with(URL("${url}/$method").openConnection() as HttpsURLConnection) {
+        with(URL("${url}/$method").openConnection() as HttpURLConnection) {
             try {
-                // Uncomment lines below to send requests to host with not verified certificates
-                /*
-                sslSocketFactory = SSLCertificateSocketFactory.getInsecure(0, null)
-                setHostnameVerifier { s, sslSession -> true }
-                 */
                 connectTimeout = 5000
                 readTimeout = 5000
                 requestMethod = operation
