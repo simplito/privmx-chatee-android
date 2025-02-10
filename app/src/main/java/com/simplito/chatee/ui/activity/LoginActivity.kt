@@ -188,7 +188,7 @@ class LoginActivity : BasicActivity() {
         return currentDomainName?.let {
             privmxEndpointContainer?.cryptoApi?.let { cryptoApi ->
                 AsyncCall {
-                    val privKey = cryptoApi.derivePrivateKey(
+                    val privKey = cryptoApi.derivePrivateKey2(
                         username,
                         password
                     )
@@ -262,7 +262,7 @@ class LoginActivity : BasicActivity() {
     ): Promise<DefaultResponseData?>? {
         return privmxEndpointContainer?.cryptoApi?.let { cryptoApi ->
             initDomainServer()
-            val privateKey = cryptoApi.derivePrivateKey(
+            val privateKey = cryptoApi.derivePrivateKey2(
                 username,
                 password
             )
