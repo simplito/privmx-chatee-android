@@ -466,6 +466,7 @@ private fun Thread.fromNewStats(threadStatsData: ThreadStatsEventData) = Thread(
     threadStatsData.lastMsgDate,
     publicMeta,
     privateMeta,
+    this.policy,
     threadStatsData.messagesCount,
     0
 )

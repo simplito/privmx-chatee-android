@@ -219,28 +219,4 @@ abstract class BasicActivity : PrivmxEndpointBaseActivity() {
         privmxEndpointContainer.endpoint?.unregisterCallbacks(this)
         super.onStop()
     }
-
-    override fun getCertPath(): String {
-        return "${filesDir}/cacert.pem".also {
-            installCaCerts(it)
-        }
-    }
-
-    private fun installCaCerts(certsPath: String) {
-        val certsInputStream =
-            BasicActivity::class.java.getResourceAsStream("/cacert.pem")
-        val file = File(certsPath);
-        if (file.exists()) {
-            return;
-        }
-        try {
-            file.outputStream().use {
-                certsInputStream?.copyTo(it)
-                certsInputStream?.close()
-            }
-        } catch (e: Exception) {
-            e.printStackTrace();
-        }
-    }
-
 }
