@@ -17,7 +17,7 @@ android {
         minSdk = 24
         targetSdk = 34
         versionCode = 10
-        versionName = "3.0"
+        versionName = "3.0.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -49,7 +49,7 @@ tasks.named(
     "privmxEndpointInstallJni",
     PrivmxEndpointInstallNativeTask::class.java
 ) {
-    version = "2.2.1"
+    version = "2.2.2"
     platforms = listOf(
         *(SupportedPlatforms.Android.values().map { it.platform }.toTypedArray())
     )
