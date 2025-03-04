@@ -49,7 +49,7 @@ tasks.named(
     "privmxEndpointInstallJni",
     PrivmxEndpointInstallNativeTask::class.java
 ) {
-    version = "2.2.1"
+    version = "2.2.2"
     platforms = listOf(
         *(SupportedPlatforms.Android.values().map { it.platform }.toTypedArray())
     )
